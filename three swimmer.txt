@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+int main()
+{
+    ll t;  cin>>t;
+
+    while(t--)
+    {
+        ll p,a,b,c;
+
+        cin>>p>>a>>b>>c;
+        
+        if(p%a==0||p%b==0||p%c==0) cout<<0<<endl;
+        else
+        {
+
+        a= a-p%a;
+        b= b-p%b;
+        c =c-p%c;
+
+        ll ans = min(a,min(b,c));
+        cout<<ans<<endl;
+        }
+    }
+}
